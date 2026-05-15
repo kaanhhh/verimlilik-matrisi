@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisenhower Verimlilik Matrisi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎯 Eisenhower Verimlilik Matrisi</h1>
+
+        <!-- Görev Ekleme Formu -->
+        <form id="todo-form">
+            <input type="text" id="task-input" placeholder="Yeni görev yazın..." required>
+            <select id="matrix-select">
+                <option value="urgent-important">Acil & Önemli (Hemen Yap)</option>
+                <option value="not-urgent-important">Acil Değil & Önemli (Planla)</option>
+                <option value="urgent-not-important">Acil & Önemli Değil (Devret)</option>
+                <option value="not-urgent-not-important">Acil Değil & Önemli Değil (Sil)</option>
+            </select>
+            <button type="submit">Ekle</button>
+        </form>
+
+        <!-- 4 Çeyrekli Matris Alanı -->
+        <div class="matrix-grid">
+            <div class="quadrant" id="urgent-important">
+                <h2 class="q-title do">🔥 Acil & Önemli</h2>
+                <ul class="task-list"></ul>
+            </div>
+            <div class="quadrant" id="not-urgent-important">
+                <h2 class="q-title schedule">📅 Planla (Acil Değil)</h2>
+                <ul class="task-list"></ul>
+            </div>
+            <div class="quadrant" id="urgent-not-important">
+                <h2 class="q-title delegate">🗣️ Devret (Önemli Değil)</h2>
+                <ul class="task-list"></ul>
+            </div>
+            <div class="quadrant" id="not-urgent-not-important">
+                <h2 class="q-title eliminate">🗑️ Ele / Sil</h2>
+                <ul class="task-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
